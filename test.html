@@ -1,0 +1,45 @@
+Итак, проверим работу этой фигни
+
+
+In this particular case, it works.
+But when you set formatter as html5, certain characters will be encoded as HTML entities,
+so the output might be different to the input. Your original start and end offsets could be off.
+
+If your html isn't perfectly-formed,
+the parser will try to fix it, so the output won't be the same as the input.
+See the documentation - Differences between parsers.
+
+For these 2 reasons, you should parse the original html, output it, and then parse that output.
+That way the input should always be the same as the output.
+
+
+<div>
+    ЧАСЫ РАБОТЫ:
+    <ul>
+        <li><strong>Понедельник</strong>: <code>09:00</code> - <code>17:00</code></li>
+        <li><strong>Вторник</strong>: <code>09:00</code> - <code>17:00</code></li>
+        <li><strong>Среда</strong>: <code>09:00</code> - <code>17:00</code></li>
+        <li><strong>Четверг</strong>: <code>09:00</code> - <code>17:00</code></li>
+        <li><strong>Пятница</strong>: <code>09:00</code> - <code>17:00</code></li>
+        <li><strong>Суббота</strong>: <code>09:00</code> - <code>17:00</code></li>
+        <li><strong>Воскресенье</strong>: <code>09:00</code> - <code>17:00</code></li>
+    </ul>
+    СОТРУДНИКИ
+    <ul>
+        <li>Иванов</li>
+        <li>Петров</li>
+        <li>Сидоров</li>
+    </ul>
+
+    In this particular case, it works.
+    But when you set formatter as html5, certain characters will be encoded as HTML entities,
+    so the output might be different to the input. Your original start and end offsets could be off.
+
+    If your html isn't perfectly-formed,
+    the parser will try to fix it, so the output won't be the same as the input.
+    See the documentation - Differences between parsers.
+
+    For these 2 reasons, you should parse the original html, output it, and then parse that output.
+    That way the input should always be the same as the output.
+
+</div>
